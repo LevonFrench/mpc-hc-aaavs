@@ -44,7 +44,7 @@ The toolbar adds previous preset, next preset, shuffle, and Auto beside the play
 | F8 | Mark the displayed preset as not working |
 | Escape | Close the management panel |
 
-All visualizer commands are listed with MPC-HC commands in **Options > Player > Keys**. The visualizer's preset, transition and scene documentation is in the `visualizer` submodule: `visualizer/docs/PRESET-MANAGEMENT.md`, `visualizer/docs/AVS-TRANSITIONS.md` and `visualizer/docs/NERV-SCENES.md`. See also the [audio implementation notes](docs/AUDIO-WIRING.md).
+All visualizer commands are listed with MPC-HC commands in **Options > Player > Keys**. The visualizer's preset, transition and scene documentation is in the `visualizer` submodule: `visualizer/docs/PRESET-MANAGEMENT.md`, `visualizer/docs/AVS-TRANSITIONS.md` and `visualizer/docs/NERV-SCENES.md`. The preset guide is written for the web Player, whose Preset Manager this fork embeds; the paths it gives are relative to the `visualizer` folder, and the keys are the ones in the table above. See also the [audio implementation notes](docs/AUDIO-WIRING.md).
 
 Historical AVS preset packs, bitmap packs, fonts and APE binaries are not distributed. A compatible catalog placed under `visualizer/avs presets/` beside the executable is verified by size and SHA-256 before rendering, and historical APE binaries are never executed. Preset and dependency packs have their own terms.
 
