@@ -1,4 +1,4 @@
-﻿# What mpc-hc-aaavs changes relative to MPC-HC
+# What mpc-hc-aaavs changes relative to MPC-HC
 
 Upstream: [clsid2/mpc-hc](https://github.com/clsid2/mpc-hc), base commit `8e1cc8761f8dfb0352779ace61c85774e4705fd5`. The fork is licensed under the GNU GPL v3 ([COPYING.txt](../COPYING.txt)), like upstream.
 
@@ -29,6 +29,8 @@ The visualizer is wired in through small hooks in these files:
 - `docs/`: BUILDING, RELEASING, RELEASE-NOTES, AUDIO-WIRING and this file.
 - `THIRD-PARTY-AVS-TRANSITIONS.txt`, `THIRD-PARTY-NERV.txt`: attribution for the transition styles and the NERV-style scene set.
 - `src/thirdparty`: third-party libraries are git submodules at the commits in [THIRDPARTY-SUBMODULES.txt](THIRDPARTY-SUBMODULES.txt), not vendored copies.
+
+- `distrib/`: the binaries tracked there (`crashrpt.dll`, `D3DCompiler_47.dll`, `D3DX9_43.dll`, `dbghelp.dll` and `sendrpt.exe`, in `x64` and `x86`) are inherited unchanged from upstream MPC-HC.
 
 Everything else is upstream MPC-HC code and keeps its original copyright and licence headers.
 

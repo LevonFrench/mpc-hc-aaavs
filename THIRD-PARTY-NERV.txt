@@ -1,3 +1,5 @@
+The code covered by this notice is in the `visualizer` submodule (the AAAVS repository), not in this repository.
+
 NERV scene design and deterministic timing reference
 
 https://github.com/bizarro/evangelion

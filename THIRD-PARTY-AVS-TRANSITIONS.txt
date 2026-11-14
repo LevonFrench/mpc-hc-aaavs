@@ -1,3 +1,5 @@
+The code covered by this notice is in the `visualizer` submodule (the AAAVS repository), not in this repository.
+
 AVS transition behavior adapted from grandchild/vis_avs, avs/vis_avs/r_transition.cpp and c_transition.h.
 https://github.com/grandchild/vis_avs
 

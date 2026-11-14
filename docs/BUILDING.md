@@ -5,7 +5,7 @@ Use a clean source checkout for reproducible public builds. Commands below run f
 ## Prerequisites
 
 - Windows x64 and Visual Studio 2022 C++ build tools, v143 MFC/ATL, and Windows SDK 10. See the [upstream compilation guide](Compilation.md) for the native toolchain.
-- Python 3 and Node.js 22 with npm, available on PATH.
+- Python 3 and Node.js 22.18 or newer with npm, available on PATH.
 - Git source dependencies: `git submodule update --init --recursive`.
 - `powershell -ExecutionPolicy Bypass -File tools/prepare-aaavs.ps1` downloads hash-pinned WebView2 SDK, NASM, and Yasm, then installs/builds the JavaScript dependencies. It does not install Visual Studio components or the WebView2 Runtime.
 

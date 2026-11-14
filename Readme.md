@@ -2,7 +2,7 @@
 
 An independent fork of [MPC-HC](https://github.com/clsid2/mpc-hc) that embeds the [AAAVS](https://github.com/LevonFrench/aaavs) music visualizer in the album-art area. MPC-HC handles decoding and playback; the visualizer receives decoded audio and follows the player's song clock. Video playback keeps the usual video renderer.
 
-**Status: parked.** This is a preview for Windows x64 and is not under active development. It is not an official MPC-HC release and is not affiliated with the MPC-HC project.
+**Status: parked.** This is preview 0.1.0 of the fork, for Windows x64, and is not under active development. `version.txt` still carries the upstream MPC-HC base version, not the fork's preview number. It is not an official MPC-HC release and is not affiliated with the MPC-HC project.
 
 The fork is based on upstream MPC-HC (clsid2/mpc-hc) commit `8e1cc8761f8dfb0352779ace61c85774e4705fd5`. This repository's history starts with the fork's first public commit; upstream history is at the link above. The changes this fork makes are listed in [docs/AAAVS-CHANGES.md](docs/AAAVS-CHANGES.md). The original MPC-HC README is kept as [docs/MPC-HC-UPSTREAM-README.md](docs/MPC-HC-UPSTREAM-README.md).
 
@@ -14,13 +14,13 @@ The visualizer lives in its own repository and is included here as the `visualiz
 git clone --recurse-submodules https://github.com/LevonFrench/mpc-hc-aaavs.git
 ```
 
-If you already cloned without them, run `git submodule update --init --recursive`.
+If you already cloned without them, run `git submodule update --init --recursive`. The `visualizer` submodule points at the [AAAVS repository](https://github.com/LevonFrench/aaavs), so the clone succeeds only while that repository is public.
 
 ## What a build needs
 
 The current build is Release Lite: it requires compatible installed DirectShow codecs, the Microsoft Edge WebView2 Runtime, and the DirectX End-User Runtime. It is not a self-contained codec bundle. Automatic update checks are disabled; the player does not offer upstream MPC-HC builds as fork updates.
 
-Native builds, CPU regression checks, live playback and GPU validation are separate steps. Follow the [build guide](docs/BUILDING.md) (Visual Studio 2022 C++ tools, Python 3, Node.js 22) and the upstream [compilation notes](docs/Compilation.md) for the native toolchain. In short, from the checkout root:
+Native builds, CPU regression checks, live playback and GPU validation are separate steps. Follow the [build guide](docs/BUILDING.md) (Visual Studio 2022 C++ tools, Python 3, Node.js 22.18 or newer) and the upstream [compilation notes](docs/Compilation.md) for the native toolchain. In short, from the checkout root:
 
 ```
 powershell -ExecutionPolicy Bypass -File tools/prepare-aaavs.ps1

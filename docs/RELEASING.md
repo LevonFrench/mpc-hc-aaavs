@@ -2,6 +2,10 @@
 
 Use the current source revision and a clean build. Build and test according to [BUILDING.md](BUILDING.md), then stage the renderer. Close the candidate application before packaging.
 
+## Packaging script needs updating
+
+`tools/package-release.py` and `tools/check-release-package.py` still list `docs/PRESET-MANAGEMENT.md`, `docs/NERV-SCENES.md`, `docs/AVS-TRANSITIONS.md` and `docs/HUD-PACKS.md` as files in this repository's `docs` folder, and `package-release.py` lists `visualizer/dist/hud-render.worker.js`. The first three documents now live in the `visualizer` submodule under `visualizer/docs/`, `docs/HUD-PACKS.md` is in neither place, and the `visualizer` checkout has no `hud-render.worker.js` source. Update both scripts before building a package; as they stand the packager will not complete.
+
 ## Create the public-only preview
 
 ```powershell
@@ -16,7 +20,7 @@ It rejects linked inputs and embedded paths to the build checkout or user profil
 
 ## Validate the exact candidate
 
-1. Confirm the native and JavaScript checks passed on the candidate revision. Run the installed-startup CPU check against the extracted package, not only the development install.
+1. Confirm the native and JavaScript checks passed on the candidate revision. Run the installed-startup CPU check (`visualizer/tools/check-mpc-installed-startup.mjs`) against the extracted package, not only the development install.
 2. On a test machine with the documented prerequisites, open an audio file and confirm AAAVS occupies the artwork area. Test resize, DPI, full screen, pause, seek, repeat, stop, and video playback.
 3. Verify preset previous/next, shuffle, each star threshold, empty eligible pools, F6/F7 ratings, F8 failure marks, clearing marks, and saved setup reload. Verify file changes inside the extracted test copy.
 4. Audition tempo acquisition and automatic phrase changes on several tracks. Test fixed NERV timing, any-to-any scene transitions, replay, and both manual/automatic transition toggles.
@@ -24,7 +28,7 @@ It rejects linked inputs and embedded paths to the build checkout or user profil
 
 ## Publish
 
-Publish only an approved candidate with its ZIP SHA-256 sidecar, release notes, and corresponding source revision/archive. Retain GPL and third-party notices and satisfy the source-distribution requirements for the binary being shared. The packager creates local artifacts; it does not create a tag, upload files, rename a GitHub repository, or claim a release has been published.
+Publish only a candidate that has passed the steps above, with its ZIP SHA-256 sidecar, release notes, and corresponding source revision/archive. Retain GPL and third-party notices and satisfy the source-distribution requirements for the binary being shared. The packager creates local artifacts; it does not create a tag, upload files, rename a GitHub repository, or claim a release has been published.
 
 ## Privacy scope
 

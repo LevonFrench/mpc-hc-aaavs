@@ -1,6 +1,6 @@
 # PCM, spectrum and Auto wiring
 
-The September 27 follow-up addressed a reported Auto stuck at "Listening for tempo" and missing high-frequency reactivity. The checks described here run on the CPU without launching graphics.
+This page covers the fixes for Auto staying at "Listening for tempo" and for missing high-frequency reactivity. The checks described here run on the CPU without launching graphics.
 
 ## Corrected path
 
